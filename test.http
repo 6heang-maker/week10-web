@@ -1,0 +1,47 @@
+
+POST http://localhost:8080/api/webtoons
+Content-Type: application/json
+
+{
+  "title": "웰컴 투 NBA",
+  "author": "필리포스",
+  "genre": "스포츠",
+  "platform": "Naver",
+  "rating": 9.9
+}
+
+###
+
+GET http://localhost:8080/api/webtoons
+
+
+###
+
+GET http://localhost:8080/api/webtoons/search/title?title=NBA
+
+###
+
+GET http://localhost:8080/api/webtoons/search/platform?platform=Naver&rating=9.0
+
+###
+
+GET http://localhost:8080/api/webtoons/search/genre?genre=스포츠
+
+
+###
+
+PUT http://localhost:8080/api/webtoons/1
+Content-Type: application/json
+
+{
+  "title": "웰컴 투 NBA",
+  "author": "필리포스",
+  "genre": "스포츠",
+  "platform": "Naver",
+  "rating": 9.5
+}
+
+###
+
+GET http://localhost:8080/api/webtoons/1
+
