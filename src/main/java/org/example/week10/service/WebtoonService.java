@@ -20,7 +20,7 @@ public class WebtoonService {
     public WebtoonService(WebtoonRepository repository) {
         this.repository = repository;
     }
-
+//Q7. save는 새로운 데이터는 추가하고 기존 데이터는 수정할 때 사용
     public WebtoonResponse create(WebtoonRequest request) {
         Webtoon webtoon = new Webtoon(
                 request.title(),
@@ -59,7 +59,7 @@ public class WebtoonService {
                 .orElseThrow(() -> new ResponseStatusException(
                         HttpStatus.NOT_FOUND, "Webtoon not found"
                 ));
-
+//Q8. Transactional을 사용하면 작업 중 바뀐 내용을 DB에 저장해 준다.
         webtoon.update(
                 request.title(),
                 request.author(),

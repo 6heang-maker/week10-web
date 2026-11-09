@@ -15,6 +15,8 @@ public class Webtoon {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+//Q1. 관리할 데이터로 정한다. 데이터의 키를 지정. 자동 기능으로 id 생성
+//Q2. DB의 테이블과 연결된다.
 
     @Column(nullable = false)
     private String title;
